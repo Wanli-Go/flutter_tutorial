@@ -63,19 +63,20 @@
 - 下载Android Studio：[下载 Android Studio 和应用工具 - Android 开发者  | Android Developers](https://developer.android.com/studio?hl=zh-cn)
 - 在Android Studio中创建一个最简单的项目。如果你发现在项目创建之后还在一直下载东西，请你关闭它，因为我们不需要那么多东西。
 - 在工具栏里找到SDK Manager，点开它，然后**把SDK的路径复制到剪切板**。
-- 找到类似于Command-line tools的东西，然后下载它。
+- 点开SDK Manager后在"SDK Tools一栏"找到类似于Command-line tools的东西，然后下载它。
 - **重要**：此时需要配置一些环境变量。具体的做法如下：
   - 添加一个环境变量，名为“ANDROID_HOME”，值为刚才拷贝的SDK路径。
   - 在PATH中添加一个文件夹，即"{刚才拷贝的SDK路径}/cmdline-tools/latest/bin"
-- Android Studio还可以管理虚拟设备。下载一个虚拟设备，并把他运行起来。
+  - 在PATH中添加一个文件夹，即"{刚才拷贝的SDK路径}/platform-tools"
+- Android Studio还可以管理安卓虚拟设备（AVD）。下载一个虚拟设备，并把他运行起来，作为我们测试Flutter程序的系统。
 
 此时，再在你的flutter项目里重新运行`flutter doctor`。应该可以看到`[√] Android toolchain - ...`。如果没有，说明这个教程还缺环，请你反馈给作者。
 
 ### 运行Flutter程序：
 
-现在，你可以把这个代码库克隆到你自己的电脑上尝试了。
+不要关闭你刚才打开的AVD。现在，你可以把这个代码库克隆到你自己的电脑上尝试了。
 
-在VSCode里打开这个flutter项目，输入```Ctrl + ` ```打开命令行输入`flutter run`。在安卓虚拟设备运行的情况下，应该可以看到程序的build、运行的过程。
+在VSCode里打开这个flutter项目，输入```Ctrl + ` ```打开命令行输入`flutter run`。在上述安卓虚拟设备运行的情况下，应该可以看到程序的build、运行的过程。
 
 ## Learn Flutter
 
