@@ -81,3 +81,15 @@
 ## Learn Flutter
 
 在学习Flutter之前，请你先过一遍Dart，因为Dart是我们Flutter使用的编程语言，而Flutter之所以如此强大有很大一部分原因就是Dart。详情请见目录下的“**dart_中文教程.md**”。
+
+
+
+### 前端UI设计基础
+
+在UI设计中，界面是由一个个**组件（Widget）**构成的，每一个Widget都是用户界面的一个不可分割的部分，例如一个按钮（Button）、一个文本（Text）、图片（Image）或容器（Container）等。**Widgets 可以嵌套**起来，比如在行（Row Widget）下可以**嵌套多个 Widget,** 把他们竖着排列起来；一些 Widget 可以**嵌套一个 Widget**，来定义他们的结构或属性，比如 不透明度（Opacity Widget）可以嵌套任意 Widget 来决定他它的不透明度。 通过构建复杂的 Widget 布局结构。到最后，我们可以形成一个组件树（Widget Tree），也就是整个应用全部组件的树形继承结构。
+
+#### 状态
+
+一个 Widget 在默认情况下是不可变（immutable）的，这意味着它们一旦显示出来就不能再改变其内部的属性，比如其文字；而要使一个Widget的属性发生变化，我们需要明白状态（State）这个概念。
+
+状态是指Widget在某个时刻可能会变化的数据。每次数据更新时，状态就会发生变化，这样我们就需要重构这个组件。
