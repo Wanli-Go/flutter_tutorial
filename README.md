@@ -649,3 +649,6 @@ Phase I 的代码中提供了详细的注解，这也是为了能够提供相对
 至此我们已经完成了Phase I的学习内容。现在你已经学会了如何定义UI布局，利用Provider改变组件的状态，并明白了如何利用pubspec.yaml导入项目依赖和外部资源，还学会了连通不同文件下的代码。
 
 下面，在Phase II和Phase III中，既然我们已经对Flutter的基本概念有了相当充足的理解，我们会加快速度！做好准备吧！
+
+# Learn Flutter - Phase II
+

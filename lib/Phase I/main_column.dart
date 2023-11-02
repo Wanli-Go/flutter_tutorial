@@ -57,12 +57,37 @@ class BodyColumnWidget extends StatelessWidget {
   }
 }
 
+class SomeDataFormat { // A virtual data format
+  late String description;
+  SomeDataFormat(this.description);
+}
+
+List<String> rawdata = ["Resource Archie", "Resource Niggle", "Resource Loath", "原神", "崩坏：星穹铁道", "我是个啥比"];
+
 class AlternateColumn extends StatelessWidget {
   const AlternateColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(child: Center(child: Text("123")));
+
+    List<SomeDataFormat> data = [];
+
+    rawdata.forEach((element) {
+      data.add(SomeDataFormat(element));
+    });
+    
+    return Expanded(
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) => 
+              ListTile(
+                  leading: const Icon(Icons.album),
+                  title: Text(data[index].description),
+                  subtitle: Text('The index of this data is $index'),
+                  trailing: const Icon(Icons.play_arrow),
+              ),
+        itemCount: data.length,
+        )
+    );
   }
 }
 
